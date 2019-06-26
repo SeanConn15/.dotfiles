@@ -322,10 +322,8 @@ globalkeys = gears.table.join(
 
 
     -- Menubar
-    awful.key({ modkey }, "p", function() awful.spawn("rofi -show run -theme gruvbox-dark-soft") end,
+    awful.key({ modkey }, "p", function() awful.spawn("rofi -show drun -theme gruvbox-dark-soft") end,
               {description = "show the launcher", group = "launcher"}),
-
-
 
     -- Custom
     awful.key({ modkey,           }, "w", function () awful.spawn("firefox") end,
