@@ -329,7 +329,13 @@ globalkeys = gears.table.join(
     awful.key({ modkey,           }, "w", function () awful.spawn("firefox") end,
               {description = "start firefox", group = "custom"}),
 
+    awful.key({ modkey, "Shift" }, "w", function () awful.spawn("firefox --private-window") end,
+              {description = "start firefox", group = "custom"}),
+
     awful.key({ modkey,           }, "e", function () awful.spawn("urxvt -e 'ranger'") end,
+              {description = "file manager", group = "custom"}),
+
+    awful.key({ modkey, "Shift" }, "e", function () awful.spawn("pcmanfm") end,
               {description = "file manager", group = "custom"}),
 
     awful.key( {}, "XF86AudioLowerVolume", function () awful.spawn("amixer sset 'Master' 10%-") end,
