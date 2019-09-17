@@ -21,13 +21,14 @@ compinit
 HISTFILE=~/.config/zsh/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
-setopt appendhistory autocd notify
+setopt inc_append_history share_history autocd notify
 unsetopt beep extendedglob nomatch
 bindkey -v
 # End of lines configured by zsh-newuser-install
 autoload -Uz promptinit
 promptinit
 export LANG="en_US.UTF-8"
+export PATH=/home/sean/.local/bin:$PATH
 
 #powerlevel 9k theme
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
@@ -125,12 +126,10 @@ alias rmswap='rm -rf ~/rf ~/.cache/vim/swap'
 alias sudo='sudo '
 alias pamcan='echo "oh yes hello this is 100% a real command and you are not some sort of dumbass"'
 alias psyu='sudo pacman -Syu'
-alias vpn='cd ~/Documents && sudo openvpn --config ipvanish-US-New-York-nyc-a01.ovpn --auth-user-pass .stuff'
+alias vpn='cd ~/Documents && sudo openvpn --mute-replay-warnings --config ipvanish-US-Chicago-chi-a23.ovpn --auth-user-pass .stuff'
 alias neo='neofetch'
 alias sshsean='ssh -p 2000 sean@208.38.224.144'
 alias sshpu='ssh connell7@data.cs.purdue.edu'
 alias gib='sudo pacman -S'
-alias gib='sudo pacman -S'
-
 
 source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme

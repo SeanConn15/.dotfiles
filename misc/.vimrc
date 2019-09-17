@@ -68,6 +68,9 @@ noremap <Right> <Nop>
 " recursive directory searching
 set path+=**;
 
+" dont do that visual mode bullshit when I try to copy text
+set mouse-=a
+
 " don't autotype comments
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
@@ -114,7 +117,7 @@ nnoremap ýV :tabnext<CR>
 
 nnoremap ýU :tabprevious<CR>
 "  make enter and shift enter insert blank lines
-map <Enter> o<ESC>
+map <Enter> o<ESC>k
 map <S-Enter> O<ESC>
 
 " make moving between windows make sense
