@@ -11,7 +11,7 @@ local naughty = require("naughty")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup").widget
 -- lain for cool stuff
-local lain = require("lain")
+--local lain = require("lain")
 
 
 -- Enable hotkeys help widget for VIM and other apps
@@ -60,7 +60,7 @@ end
 
 
 -- This is used later as the default terminal and editor to run.
-terminal = "urxvt"
+terminal = "kitty"
 editor = os.getenv("EDITOR") or "vim"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -72,14 +72,14 @@ editor_cmd = terminal .. " -e " .. editor
 modkey = "Mod4"
 
 --settings for layouts
-lain.layout.termfair.nmaster = 3
+-- lain.layout.termfair.nmaster = 3
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
 -- {{{
     awful.layout.suit.tile.left,
     -- lain.layout.termfair,
-    lain.layout.screensaver,
+    -- lain.layout.screensaver,
     awful.layout.suit.tile,
     awful.layout.suit.tile.bottom,
     -- awful.layout.suit.tile.top,
